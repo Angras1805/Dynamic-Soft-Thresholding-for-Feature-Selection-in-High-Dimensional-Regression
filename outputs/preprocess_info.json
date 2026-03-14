@@ -1,0 +1,6 @@
+{
+  "n_samples": 1460,
+  "n_features_after_preprocess": 288,
+  "n_numeric": 37,
+  "n_categorical": 43
+}

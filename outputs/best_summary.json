@@ -1,0 +1,81 @@
+{
+  "config": {
+    "random_seed": 42,
+    "n_splits": 5,
+    "log_target": true,
+    "ridge_alphas": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "lasso_lambdas": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "dyn_lambdas": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "gamma0": 1.0,
+    "gamma1_grid": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "eps": 1e-06,
+    "anneal_strength": 2.0,
+    "anneal_power": 1.0,
+    "max_iter": 5000,
+    "tol": 1e-06,
+    "power_iter": 40,
+    "trace_every": 50,
+    "coef_zero_tol": 1e-08
+  },
+  "best_by_method": [
+    {
+      "method": "dynamic_lasso",
+      "param": 0.0001,
+      "mean_mse": 0.15931290991493544,
+      "std_mse": 0.020401718688530534,
+      "mean_nnz": 249.0,
+      "mean_runtime_s": 0.0038319599931128322,
+      "gamma1": 0.5,
+      "mean_iters": 2.0
+    },
+    {
+      "method": "lasso",
+      "param": 0.0003,
+      "mean_mse": 0.02193647018764664,
+      "std_mse": 0.014636235701335999,
+      "mean_nnz": 136.2,
+      "mean_runtime_s": 0.03373873999807984,
+      "gamma1": NaN,
+      "mean_iters": NaN
+    },
+    {
+      "method": "ridge",
+      "param": 10.0,
+      "mean_mse": 0.023086933380442914,
+      "std_mse": 0.01367404458585041,
+      "mean_nnz": 283.2,
+      "mean_runtime_s": 0.0049745599972084165,
+      "gamma1": NaN,
+      "mean_iters": NaN
+    }
+  ]
+}
